@@ -1,0 +1,392 @@
+.Checkout {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	position: relative;
+	padding: 40px;
+	font-weight: 400;
+}
+
+.Checkout .steps {
+	width: 90%;
+	margin: 0 auto;
+	border-bottom: 1px solid #E8E8E8;
+	margin-top: 20px;
+	max-width: 860px;
+	position: relative
+}
+
+.Checkout .steps .step{
+	position:absolute;
+	width: 100px;
+	text-align: center;
+}
+
+.Checkout .steps .step .circle {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: #E8E8E8;
+	border-radius: 15px;
+}
+.Checkout .steps .step.active .circle {
+	background: #61CB46;
+}
+.Checkout .steps .step .title{
+	display:inline-block;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 10px;
+	font-size: 16px;
+}
+.Checkout .steps .step {
+	position: absolute;
+	width: 100px;
+	text-align: center;
+	top: -7px;
+	left: -43px;
+}
+.Checkout .steps .step.step2 {
+	left:calc(50% - 80px);
+	width: 160px
+}
+.Checkout .steps .step.step3 {
+	left:auto;
+	right:-43px;
+}
+.Checkout.success .steps .step.step3 .circle {
+    background: #61CB46;
+    transition: background .3s ease;
+ }
+.Checkout .contentCart {
+	display: inline-block;
+	padding-top: 80px;
+	position: relative;
+	width: 100%;
+}
+
+.Checkout .contentCart figure {
+	float: left;
+	width: 40%;
+	height: auto;
+	overflow: hidden;
+	border-radius: 10px;
+	max-height: 605px;
+}
+
+.Checkout .contentCart figure img {
+	float: left;
+	width: 100%;
+	max-width: none;
+}
+
+.Checkout .contentCart .cartDetail {
+	float: right;
+	width: 55%;
+	background: #F7F7F7;
+	border-radius: 10px;
+	padding: 20px;
+	position: absolute;
+	right: 0;
+	height: calc(100% - 75px);
+	min-height: 610px;
+}
+
+.Checkout .contentCart .cartDetail h2{
+    font-size:22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.Checkout .contentCart .cartDetail h3{
+    font-size:16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.Checkout .contentCart .cartDetail p{
+    font-size:16px;
+    font-weight: 400;
+    color: #A5A5A5;
+    margin-bottom: 10px;
+}
+
+.Checkout .contentCart .cardTotal {
+	float: left;
+	width: calc(55% - 20px);
+	margin: 10px;
+}
+.Checkout .contentCart .deliveryDetails {
+	float: left;
+	width: calc(45% - 20px);
+	margin: 10px;
+}
+.Checkout .contentCart .deliveryDetails h2{
+	font-size:20px;
+}
+.Checkout .contentCart .totalCost{
+    width: calc(45% - 20px);
+    margin: 10px;
+    float:right;
+    position: relative;
+}
+.Checkout .contentCart .totalCost .ttlCost {
+	right: 0;
+	font-size: 30px;
+	font-weight: 400;
+	color: #000000;
+	position: absolute;
+	bottom: 0;
+}
+.Checkout .contentCart .paymentMethod{
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+}
+.Checkout .contentCart .paymentMethodConform{
+    display: inline-block;
+    width: calc(45% - 20px);
+    margin-top: 10px;
+}
+
+.Checkout .contentCart .paymentMethodConform{
+    display: inline-block;
+    width: calc(45% - 20px);
+    margin-top: 10px;
+}
+.Checkout .contentCart .confirmation .totalCost {
+	width: calc(50% - 20px);
+	margin: 10px;
+	float: left;
+	position: relative;
+}
+.Checkout .contentCart ul.paymentOptns{
+    width: 100%;
+}
+
+.Checkout .contentCart ul.paymentOptns li {
+	width: 100%;
+	padding: 25px;
+	margin: 10px 0;
+	background: #FFF;
+	border: 1px solid #FFF;
+	border-radius: 10px;
+	cursor: pointer;
+	position: relative;
+	transition: border .3s ease;
+}
+.Checkout .contentCart ul.paymentOptns li.selected {
+	border: 1px solid #5DAC50;
+}
+
+.Checkout .contentCart ul.paymentOptns li img{
+    float: right;
+    height: 30px;
+    width: auto;
+    margin-top: -5px;
+}
+
+.Checkout .contentCart ul.paymentOptns li .tag {
+	position: absolute;
+	top: -10px;
+	font-size: 10px;
+	background: #FFCC00;
+	border-radius: 2.079px;
+	padding: 4px 15px;
+	color: #9E7D27;
+	font-weight: 600;
+	left: 25px;
+}
+
+.Checkout .contentCart ul.paymentOptns[value="payBanck"] li#payBanck {
+	border: 1px solid #5DAC50;
+}
+.Checkout .contentCart ul.paymentOptns[value="payCard"] li#payCard {
+	border: 1px solid #5DAC50;
+}
+.Checkout .contentCart ul.paymentOptns[value="payApple"] li#payApple {
+	border: 1px solid #5DAC50;
+}
+
+.Checkout .contentCart .btContinue{
+    float: right;
+    width: 40%;
+}
+.Checkout .contentCart .placeOrder {
+	float: right;
+	width: 40%;
+	margin-top: 20px;
+}
+
+.Checkout .contentCart .cartDetail.confirmation{
+    display: none;
+    background: #1DE9B6;
+    opacity: 0;
+    transition: opacity .2s ease,  background 1s ease;
+}
+.Checkout.success .contentCart .cartDetail.check{
+    display: none;
+}
+
+.Checkout.success .contentCart .cartDetail.confirmation{
+    display: block;
+}
+
+.Checkout.success.view .contentCart .cartDetail.confirmation{
+    opacity: 1;
+    background: #F7F7F7;;
+}
+
+.Checkout .contentCart .cartDetail .paymentMethodConform p{
+    padding: 16px;
+}
+.Checkout .contentCart .cartDetail .paymentMethodConform p i {
+	font-size: 47px;
+	color: #316734;
+	margin: -18px 12px 0 -18px;
+	float: left;
+}
+
+@media (max-width: 1350px)
+{
+    .Checkout .contentCart .cardTotal {
+        width: calc(45% - 20px);
+    }
+    .Checkout .contentCart .deliveryDetails {
+    	width: calc(55% - 20px);
+    }
+    .Checkout .contentCart .totalCost {
+    	width: calc(55% - 20px);
+    }
+}
+
+@media (max-width: 1040px){
+    .Checkout {
+    	padding: 16px;
+    }
+    .Checkout .contentCart .cartDetail {
+    	width: 100%;
+    	padding: 0px;
+    	background: none;
+    }
+    .Checkout .boxMobileFix {
+    	float: left;
+    	width: 100%;
+    	padding: 16px 16px 4px 16px;
+    	background: #EEE;
+    	border-radius: 10px;
+    }
+    .Checkout .contentCart figure {
+    	width: 35%;
+    	margin: 16px;
+    }
+    .Checkout .contentCart figure img {
+    	position: relative;
+    	z-index: 2;
+    }
+
+    .Checkout .contentCart .cardTotal {
+    	width: 55%;
+    	float: right;
+    	margin: 0 0 10px;
+    }
+    .Checkout .contentCart .cartDetail h2 {
+    	font-size: 18px;
+    }
+    .Checkout .contentCart .cardTotal h2 {
+        display: none;
+    }
+    .Checkout .contentCart .cartDetail h3 {
+    	font-size: 18px;
+    	margin-bottom: 8px;
+    }
+    .Checkout .contentCart .cartDetail p {
+    	font-size: 12px;
+    	margin-bottom: 8px;
+    }
+    .Checkout .contentCart .deliveryDetails {
+    	width: 55%;
+    	margin: 0;
+    	float: right;
+    }
+    .Checkout .contentCart .totalCost {
+    	width: 100%;
+    	margin: 20px 0 10px;
+    }
+
+    .Checkout .contentCart .paymentMethod {
+    	float: left;
+    	width: 100%;
+    	padding: 16px 16px 8px 16px;
+    	background: #EEE;
+    	border-radius: 10px;
+    }
+    .Checkout .contentCart ul.paymentOptns li {
+    	padding: 24px;
+    }
+    .Checkout .contentCart ul.paymentOptns li img {
+    	float: right;
+    	height: auto;
+    	width: auto;
+    	margin-top: -5px;
+    	max-width: 132px;
+    	max-height: 25px;
+    }
+    .Checkout .contentCart ul.paymentOptns li.payBanck img {
+    	margin: -1px -13px 0 0px;
+    }
+    .Checkout .contentCart .btContinue {
+    	float: right;
+    	width: 100%;
+    	margin: 16px 0 30px;
+    }
+
+    .Checkout .contentCart .deliveryDetails h2 {
+    	font-size: 14px;
+    	margin-bottom: 10px;
+    }
+    .Checkout .steps{
+        display: none;
+    }
+    .Checkout .contentCart {
+    	display: inline-block;
+    	padding-top: 0px;
+    	position: relative;
+    	width: 100%;
+    }
+    .Checkout.success.view .contentCart .cartDetail.confirmation {
+    	opacity: 1;
+    	background: #F7F7F7;
+    	height: auto;
+    	min-height: auto;
+    }
+
+    .Checkout .contentCart .confirmation .cardTotal {
+    	margin: 16px 0 10px;
+    }
+    .Checkout .contentCart .paymentMethodConform {
+    	display: inline-block;
+    	width: 100%;
+    	margin-top: 30px;
+    	padding: 0 16px;
+    }
+    .Checkout .contentCart .confirmation .totalCost {
+    	width: calc(100% - 20px);
+    	margin: 10px;
+    	float: left;
+    	position: relative;
+    	border-top: 1px solid #DDD;
+    	padding-top: 13px;
+    }
+    .Checkout .contentCart .confirmation .placeOrder {
+    	float: right;
+    	width: 40%;
+    	margin-top: 0px;
+    	position: absolute;
+    	left: 0;
+    	bottom: -56px;
+    	width: 100%;
+    }
+    .Checkout.success .contentCart figure {
+    	max-height: 85px;
+    }
+
+}
